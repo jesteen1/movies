@@ -11,8 +11,8 @@
     <section class="bg-purple-50">
 <div class="p-5">
 <p class="text-4xl text-center font-bold">The movies</p>
-    <div class=" flex justify-center p-5 hidden" id="show">
-<video width="600px" controls height="400px" src="./movies/Black_Adam.mp4" id="video"></video>
+    <div class=" hidden flex justify-center p-5 " id="show">
+<video  controls width="700px" height="800px" src="./movieslist/Black_Adam.mp4" id="video"></video>
     </div>
     <div class="flex justify-center p-3 text-2xl" >
 
@@ -23,7 +23,7 @@
     <section class="bg-yellow-200">
         <p class="text-center text-4xl p-5 font-bold "> Movie List</p>
 
-        <div class="p-10  flex gap-10 " > 
+        <div class="p-10  flex gap-10  flex-wrap md:w-full" > 
             <div  class="   hidden  bg-white p-5 w-80 transform scale-100 hover:scale-105 transition duration-300 cursor-pointer " id="target">
                 <div >
                     <img src="./thumbnails/aquman.png" alt="aquman">
@@ -61,7 +61,7 @@
      var movie_name=document.getElementById('movie-name')
      var target=document.querySelectorAll('#target')
      var video=document.getElementById("video");
-     var locations=["kindly paste location of the video","./movies/Aquman.mp4","./movies/Black_Adam.mp4"]
+     var locations=["kindly paste location of the video","./movieslist/Aquman.mp4","./movieslist/Black_Adam.mp4"]
      var show=document.getElementById("show")
 let i=0
 var attened=false
