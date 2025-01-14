@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movies</title>
+    <link rel="stylesheet" href="./tailwind.css">
+</head>
+<body>
+    <section class="bg-purple-50">
+<div class="p-5">
+<p class="text-4xl text-center font-bold">The movies</p>
+    <div class=" flex justify-center p-5 hidden" id="show">
+<video width="600px" controls height="400px" src="./movies/Black_Adam.mp4" id="video"></video>
+    </div>
+    <div class="flex justify-center p-3 text-2xl" >
+
+        <p class="mr-2 ">MOVIE NAME  :</p><p id="movie-name" class="font-bold">please select a  movie</p>
+    </div>
+</div>
+    </section>
+    <section class="bg-yellow-200">
+        <p class="text-center text-4xl p-5 font-bold "> Movie List</p>
+
+        <div class="p-10  flex gap-10 " > 
+            <div  class="   hidden  bg-white p-5 w-80 transform scale-100 hover:scale-105 transition duration-300 cursor-pointer " id="target">
+                <div >
+                    <img src="./thumbnails/aquman.png" alt="aquman">
+                </div>
+                <div class="flex p-5 mr-2 custom font-semibld"><p >Movie Name :</p> 
+                       <p class="ml-2 font-bold" id="movie-named">Aquman part 2 </p></div>
+            </div>
+            <div  class=" bg-white p-5 w-80 transform scale-100 hover:scale-105 transition duration-300 cursor-pointer " id="target">
+                <div >
+                    <img src="./thumbnails/aquman.png" alt="aquman">
+                </div>
+                <div class="flex p-5 mr-2 custom font-semibld"><p >Movie Name :</p> 
+                       <p class="ml-2 font-bold" id="movie-named">Aquman part 2 </p></div>
+            </div>
+            <div  class=" bg-white p-5 w-80 transform scale-100 hover:scale-105 transition duration-300 cursor-pointer " id="target">
+                <div >
+                    <img src="https://thesouthtexan.com/wp-content/uploads/2022/11/AnotherBlackAdamMoviePoster.jpeg" class="w-72 height" height="400px" alt="black adam">
+                </div>
+                <div class="flex p-5 mr-2 custom font-semibld"><p >Movie Name :</p> 
+                       <p class="ml-2 font-bold" id="movie-named">Black Adam </p></div>
+            </div>
+        </div>
+    </section>
+</body>
+<style>
+    .custom{
+        font-size: 15px;
+    }
+    .height{
+        height: 278px;
+    }
+</style>
+ <script>
+     var movie_named=document.querySelectorAll('#movie-named')
+     var movie_name=document.getElementById('movie-name')
+     var target=document.querySelectorAll('#target')
+     var video=document.getElementById("video");
+     var locations=["kindly paste location of the video","./movies/Aquman.mp4","./movies/Black_Adam.mp4"]
+     var show=document.getElementById("show")
+let i=0
+var attened=false
+target.forEach((element,index) => {
+    element.onclick=()=>{
+      //  alert(index)
+attened=true
+if(attened==true){
+show.classList.remove("hidden")
+}
+        movie_name.innerHTML=movie_named[index].innerHTML
+        video.setAttribute('src',locations[index])
+    }
+});
+
+
+
+
+</script> 
+</html>
